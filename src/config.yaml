@@ -1,0 +1,38 @@
+options:
+  debug:
+    default: False
+    type: boolean
+    description: Enable debug logging - delete if not needed
+  verbose:
+    default: False
+    type: boolean
+    description: Enable verbose logging - delete if not needed
+  share-backend-name:
+    type: string
+    default: generic
+    description: |
+      The name given to the backend.  This is used to generate the backend
+      configuration section and link it into the share server.  If two
+      different configurations of the same backend type are needed, then this
+      config option can be used to separate them in the backend configuration.
+  share-protocols:
+    type: string
+    default: NFS CIFS
+    description: |
+      The share protocols that the backends will be able to provide.  The
+      default is good for the generic backends.  Other backends may not support
+      both NFS and CIFS.  This is a space delimited list of protocols.
+  driver-some-config-value:
+    type: string
+    default: some-default-string
+    description: |
+      This is the multiline description of what the configuration value is and
+      information that might be needed for it.
+  driver-some-boolean:
+    type: boolean
+    default: False
+    description: A boolean value as a driver
+  driver-some-int-config:
+    type: int
+    default: 1
+    description: And this is how you do a integer value

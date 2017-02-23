@@ -1,0 +1,20 @@
+name: {{ metadata.package }}
+subordinate: true
+maintainer: The maintainer's name <some-name@example.com>
+summary: Summary of this Manila plugin charm
+description:
+  Description of this Manila plugin charm
+tags:
+  - openstack
+series:
+  - xenial
+  - trusty
+  - yakkety
+provides:
+  manila-plugin:
+    interface: manila-plugin
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
